@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.line {
+  line-height: 1.5;
+}
+.rotation {
+  transform: rotateY(-180deg);
+}
+
+.lighthouse {
+  line-height: 50px;
+  font: poppins;
+}
