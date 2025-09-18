@@ -56,18 +56,77 @@ export default function ForMobile() {
 }
 
 function FilterOptions() {
+  const [expanded, setExpanded] = useState({
+    topDeals: true,
+    prices: true,
+    color: true,
+    brand: true,
+  });
+
+  const [filters, setFilters] = useState({
+    brand: [],
+    color: [],
+    prices: [0, 100], // this is just an example range
+    topDeals: false,
+  });
+// Togglr Expand Logic Here
+  const toggleExpand = (key) => {
+    setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
+
+  const handleSelect = (type, value) => {
+    setFilters((prev) => {
+      if (Array.isArray(prev[type])) {
+        //In This Code in the return We Can Multi-select filters like (brand, color, etc.)
+        return {
+          ...prev,
+          [type]: prev[type].includes(value)
+            ? prev[type].filter((item) => item !== value)
+            : [...prev[type], value],
+        };
+      } else {
+        // In This else Code Only Single value filters like (topDeals, price range, etc.)
+        return { ...prev, [type]: value };
+      }
+    });
+  };
+
   return (
     <div>
-      <TopDeals />
+      <TopDeals
+        expanded={expanded.topDeals}
+        toggleExpand={() => toggleExpand("topDeals")}
+        selected={filters.topDeals}
+        onSelect={(val) => handleSelect("topDeals", val)}
+      />
+
       <div className="mt-10">
-        <Prices />
+        <Prices
+          expanded={expanded.prices}
+          toggleExpand={() => toggleExpand("prices")}
+          selected={filters.prices}
+          onSelect={(val) => handleSelect("prices", val)}
+        />
       </div>
+
       <div className="mt-10">
-        <Color />
+        <Color
+          expanded={expanded.color}
+          toggleExpand={() => toggleExpand("color")}
+          selected={filters.color}
+          onSelect={(val) => handleSelect("color", val)}
+        />
       </div>
+
       <div className="mt-10">
-        <Brand />
+        <Brand
+          expanded={expanded.brand}
+          toggleExpand={() => toggleExpand("brand")}
+          selected={filters.brand}
+          onSelect={(val) => handleSelect("brand", val)}
+        />
       </div>
+
       <div className="cursor-pointer flex justify-center items-center p-4 bg-[#F6F7F8]">
         <h2 className="text-xl font-semibold">MORE</h2>
       </div>

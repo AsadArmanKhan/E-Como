@@ -7,21 +7,21 @@ export default function ProductToolbar() {
   return (
     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-gray-50 p-3 rounded-md shadow-sm gap-3">
       {/* Left Side */}
-      <div className="flex items-center justify-between sm:justify-start gap-4">
+      <div className="flex items-center justify-between sm:justify-start gap-16">
         <span className="text-sm font-medium text-gray-700">13 Items</span>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <span className="text-sm text-gray-500">Sort By</span>
-          <select className="border rounded-md text-sm px-2 py-1 bg-white">
+          <select className="border w-30 border-gray-200 rounded-md text-sm px-2 py-1 bg-white">
             <option>Name</option>
             <option>Price</option>
             <option>Newest</option>
           </select>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <span className="text-sm text-gray-500">Show</span>
-          <select className="border rounded-md text-sm px-2 py-1 bg-white">
+          <select className="border rounded-md border-gray-200 text-sm px-2 w-20  py-1 bg-white">
             <option>12</option>
             <option>24</option>
             <option>36</option>
