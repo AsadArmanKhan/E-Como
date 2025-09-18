@@ -1,4 +1,5 @@
 import React from "react";
+import ShortBy from "./ShortBy";
 
 export default function Products() {
   return (
@@ -27,6 +28,7 @@ export default function Products() {
           />
         </div>
       </div>
+      <ShortBy />
       <div className="">
         <div className="bg-white px-4 py-8">
           {/* Product Grid */}
@@ -70,7 +72,7 @@ export default function Products() {
               <img
                 src="/36fadfb6e72b8e42c2afe8453f8af0e3795dd9e1 (1).png"
                 alt="Nike Air Max 270 React"
-               className="w-full h-70 z-50 object-center mb-3"
+                className="w-full h-70 z-50 object-center mb-3"
               />
               <h3 className="text-gray-700 pl-3 pr-3 text-sm font-medium">
                 Nike Air Max 270 React
