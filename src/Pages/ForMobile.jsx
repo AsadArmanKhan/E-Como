@@ -6,7 +6,7 @@ import Color from "./Color";
 import Brand from "./Brand";
 import TopDeals from "./TopDeals";
 
-export default function ForMobile() {
+export default function ForMobile({ filters, setFilters }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function ForMobile() {
   return (
     <section className="w-full mb-10 rounded shadow-sm">
       {/* Header Section */}
-      <div className="flex items-center justify-between ">
+      <div className="flex items-center justify-between">
         <button
           onClick={() => setIsOpen(true)}
           className="md:hidden flex items-start gap-2 text-[#33A0FF] font-medium"
@@ -24,8 +24,9 @@ export default function ForMobile() {
           <FaFilter /> Filter
         </button>
       </div>
+
       <div className="hidden md:block p-4">
-        <FilterOptions />
+        <FilterOptions filters={filters} setFilters={setFilters} />
       </div>
 
       {isOpen && (
@@ -46,7 +47,7 @@ export default function ForMobile() {
             </button>
 
             <div className="mt-12 overflow-y-auto px-5 pb-6">
-              <FilterOptions />
+              <FilterOptions filters={filters} setFilters={setFilters} />
             </div>
           </div>
         </div>
@@ -55,7 +56,7 @@ export default function ForMobile() {
   );
 }
 
-function FilterOptions() {
+function FilterOptions({ filters, setFilters }) {
   const [expanded, setExpanded] = useState({
     topDeals: true,
     prices: true,
@@ -63,13 +64,6 @@ function FilterOptions() {
     brand: true,
   });
 
-  const [filters, setFilters] = useState({
-    brand: [],
-    color: [],
-    prices: [0, 100], // this is just an example range for error less code
-    topDeals: false,
-  });
-// Toggle Expand Logic is Here
   const toggleExpand = (key) => {
     setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
   };
@@ -77,7 +71,6 @@ function FilterOptions() {
   const handleSelect = (type, value) => {
     setFilters((prev) => {
       if (Array.isArray(prev[type])) {
-        //In This Code in the return We Can Multi-select filters like (brand, color, etc.)
         return {
           ...prev,
           [type]: prev[type].includes(value)
@@ -85,7 +78,6 @@ function FilterOptions() {
             : [...prev[type], value],
         };
       } else {
-        // In This else Code Only Single value filters like (topDeals, price range, etc.)
         return { ...prev, [type]: value };
       }
     });
@@ -125,10 +117,6 @@ function FilterOptions() {
           selected={filters.brand}
           onSelect={(val) => handleSelect("brand", val)}
         />
-      </div>
-
-      <div className="cursor-pointer flex justify-center items-center p-4 bg-[#F6F7F8]">
-        <h2 className="text-xl font-semibold">MORE</h2>
       </div>
     </div>
   );

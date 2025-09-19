@@ -1,37 +1,26 @@
 import React from "react";
+import { topDealsData } from "../data/topDeals";
 
-export default function TopDeals() {
+export default function TopDeals({ selected, onSelect }) {
   return (
     <section className="bg-[#F6F7F8]">
-      <h2 className="text-xl font-semibold mb-4 ml-4">HotDeals</h2>
-      <div className="flex justify-between p-4 hover:bg-gray-100 rounded cursor-pointer">
-        <span>Nike</span>
-        <span className="text-gray-400">2</span>
-      </div>
-      <div className="flex justify-between p-4 text-[#33A0FF] font-medium hover:bg-blue-50 rounded cursor-pointer">
-        <span>Airmax</span>
-        <span>48</span>
-      </div>
-      <div className="flex justify-between p-4 hover:bg-gray-100 rounded cursor-pointer">
-        <span>Adidas</span>
-        <span className="text-gray-400">14</span>
-      </div>
-      <div className="flex justify-between p-4 hover:bg-gray-100 rounded cursor-pointer">
-        <span>Vans</span>
-        <span className="text-gray-400">15</span>
-      </div>
-      <div className="flex justify-between p-4 hover:bg-gray-100 rounded cursor-pointer">
-        <span>All Stars</span>
-        <span className="text-gray-400">23</span>
-      </div>
-      <div className="flex justify-between p-4 hover:bg-gray-100 rounded cursor-pointer">
-        <span>Nike</span>
-        <span className="text-gray-400">1</span>
-      </div>
-      <div className="flex justify-between p-4 hover:bg-gray-100 rounded cursor-pointer">
-        <span>Adidas</span>
-        <span className="text-gray-400">95</span>
-      </div>
+      <h2 className="text-xl font-semibold mb-4 ml-4">Hot Deals</h2>
+      {topDealsData.map((product, i) => (
+        <div
+          key={i}
+          onClick={() => onSelect(product.name)}
+          className={`flex justify-between p-4 rounded cursor-pointer ${
+            selected === product.name
+              ? "text-[#33A0FF] font-medium bg-blue-50"
+              : "hover:bg-gray-100"
+          }`}
+        >
+          <span>{product.name}</span>
+          <span className={selected === product.name ? "" : "text-gray-400"}>
+            {product.count}
+          </span>
+        </div>
+      ))}
     </section>
   );
 }

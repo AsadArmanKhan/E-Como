@@ -1,35 +1,53 @@
-import { useState } from "react";
+import React from "react";
 import { Grid, List } from "lucide-react";
 
-export default function ShortBy() {
-  const [view, setView] = useState("grid");
-
+export default function ShortBy({
+  totalItems,
+  sortBy,
+  setSortBy,
+  showCount,
+  setShowCount,
+  view,
+  setView,
+}) {
   return (
     <div className="flex flex-col gap-3 p-3 mb-5 mt-5 bg-gray-50 rounded-md shadow-sm sm:flex-row sm:items-center sm:justify-between">
-      
       {/* Left Side */}
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-8">
-        
-        {/* Item Count */}
-        <span className="text-sm font-medium text-gray-700">13 Items</span>
+        <span className="text-sm font-medium text-gray-700">
+          {totalItems} Items
+        </span>
 
         {/* Sort By */}
-        <div className="flex items-center justify-between sm:justify-start gap-2">
+        <div className="flex items-center gap-2">
           <span className="text-sm text-gray-500">Sort By</span>
-          <select className="border w-full sm:w-32 border-gray-200 rounded-md text-sm px-2 py-1 bg-white">
-            <option>Name</option>
-            <option>Price</option>
-            <option>Newest</option>
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+            className="border w-full sm:w-40 border-gray-200 rounded-md text-sm px-2 py-1 bg-white"
+          >
+            <option value="name-asc">Name (A–Z)</option>
+            <option value="name-desc">Name (Z–A)</option>
+            <option value="price-asc">Price (Low → High)</option>
+            <option value="price-desc">Price (High → Low)</option>
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="popularity">Popularity</option>
+            <option value="rating">Best Rating</option>
           </select>
         </div>
 
         {/* Show Count */}
-        <div className="flex items-center justify-between sm:justify-start gap-2">
+        <div className="flex items-center gap-2">
           <span className="text-sm text-gray-500">Show</span>
-          <select className="border w-full sm:w-20 border-gray-200 rounded-md text-sm px-2 py-1 bg-white">
-            <option>12</option>
-            <option>24</option>
-            <option>36</option>
+          <select
+            value={showCount}
+            onChange={(e) => setShowCount(Number(e.target.value))}
+            className="border w-full sm:w-20 border-gray-200 rounded-md text-sm px-2 py-1 bg-white"
+          >
+            <option value={6}>6</option>
+            <option value={12}>12</option>
+            <option value={24}>24</option>
           </select>
         </div>
       </div>
