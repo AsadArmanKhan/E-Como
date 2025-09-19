@@ -11,8 +11,8 @@ export default function Products({
   setShowCount,
   view,
   setView,
+  hotDeal,
 }) {
-  // 🔹 Filter Logic
   const filteredProducts = products.filter((product) => {
     const brandOk =
       filters.brand.length === 0 || filters.brand.includes(product.brand);
@@ -20,12 +20,11 @@ export default function Products({
       filters.color.length === 0 || filters.color.includes(product.color);
     const priceOk =
       product.price >= filters.prices[0] && product.price <= filters.prices[1];
-    const topDealsOk = !filters.topDeals || product.topDeal === true;
+    const hotDealOk = !hotDeal || product.brand === hotDeal;
 
-    return brandOk && colorOk && priceOk && topDealsOk;
+    return brandOk && colorOk && priceOk && hotDealOk;
   });
 
-  // 🔹 Sort Logic
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     if (sortBy === "price-asc") return a.price - b.price;
     if (sortBy === "price-desc") return b.price - a.price;
@@ -43,12 +42,12 @@ export default function Products({
     return 0;
   });
 
-  // 🔹 Show Count Logic
+  //  Show Count Logic Here
   const limitedProducts = sortedProducts.slice(0, showCount);
 
   return (
     <section className="p-4">
-      {/* Banner / Header */}
+      {/* Big Shoes Banner */}
       <BigShoes />
 
       {/* ShortBy Section */}
@@ -138,7 +137,7 @@ export default function Products({
             ))}
           </div>
 
-          {/* 🔹 Load More Button */}
+          {/* Load More Button */}
           {showCount < sortedProducts.length && (
             <div className="flex justify-center mt-6">
               <button
@@ -153,5 +152,4 @@ export default function Products({
       )}
     </section>
   );
-}   
-// i have pasted this code after doing that the short by is not working 
+}

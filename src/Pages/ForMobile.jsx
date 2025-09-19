@@ -6,7 +6,12 @@ import Color from "./Color";
 import Brand from "./Brand";
 import TopDeals from "./TopDeals";
 
-export default function ForMobile({ filters, setFilters }) {
+export default function ForMobile({
+  filters,
+  setFilters,
+  hotDeal,
+  setHotDeal,
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -26,7 +31,12 @@ export default function ForMobile({ filters, setFilters }) {
       </div>
 
       <div className="hidden md:block p-4">
-        <FilterOptions filters={filters} setFilters={setFilters} />
+        <FilterOptions
+          filters={filters}
+          setFilters={setFilters}
+          hotDeal={hotDeal}
+          setHotDeal={setHotDeal}
+        />
       </div>
 
       {isOpen && (
@@ -47,7 +57,12 @@ export default function ForMobile({ filters, setFilters }) {
             </button>
 
             <div className="mt-12 overflow-y-auto px-5 pb-6">
-              <FilterOptions filters={filters} setFilters={setFilters} />
+              <FilterOptions
+                filters={filters}
+                setFilters={setFilters}
+                hotDeal={hotDeal}
+                setHotDeal={setHotDeal}
+              />
             </div>
           </div>
         </div>
@@ -56,7 +71,7 @@ export default function ForMobile({ filters, setFilters }) {
   );
 }
 
-function FilterOptions({ filters, setFilters }) {
+function FilterOptions({ filters, setFilters, hotDeal, setHotDeal }) {
   const [expanded, setExpanded] = useState({
     topDeals: true,
     prices: true,
@@ -86,10 +101,10 @@ function FilterOptions({ filters, setFilters }) {
   return (
     <div>
       <TopDeals
+        hotDeal={hotDeal}
+        onSelect={setHotDeal}
         expanded={expanded.topDeals}
         toggleExpand={() => toggleExpand("topDeals")}
-        selected={filters.topDeals}
-        onSelect={(val) => handleSelect("topDeals", val)}
       />
 
       <div className="mt-10">

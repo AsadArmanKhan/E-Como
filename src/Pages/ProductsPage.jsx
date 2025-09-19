@@ -10,22 +10,28 @@ export default function ProductsPage() {
     topDeals: false,
   });
 
+  const [hotDeal, setHotDeal] = useState(""); // For filtering the products by name
   const [sortBy, setSortBy] = useState("name-asc");
   const [showCount, setShowCount] = useState(12);
   const [view, setView] = useState("grid");
-
   return (
     <section className="w-full flex flex-col p-5">
       <div className="w-full flex justify-between">
         {/* Sidebar / Filters */}
         <div className="w-[20%]">
-          <ForMobile filters={filters} setFilters={setFilters} />
+          <ForMobile
+            filters={filters}
+            setFilters={setFilters}
+            hotDeal={hotDeal}
+            setHotDeal={setHotDeal}
+          />
         </div>
 
         {/* Products */}
         <div className="w-[78%]">
           <Products
             filters={filters}
+            hotDeal={hotDeal}
             sortBy={sortBy}
             setSortBy={setSortBy}
             showCount={showCount}
