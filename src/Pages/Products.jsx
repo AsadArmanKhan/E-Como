@@ -17,7 +17,8 @@ export default function Products({
     const brandOk =
       filters.brand.length === 0 || filters.brand.includes(product.brand);
     const colorOk =
-      filters.color.length === 0 || filters.color.includes(product.color);
+      filters.color.length === 0 ||
+      product.color.some((c) => filters.color.includes(c));
     const priceOk =
       product.price >= filters.prices[0] && product.price <= filters.prices[1];
     const hotDealOk = !hotDeal || product.brand === hotDeal;

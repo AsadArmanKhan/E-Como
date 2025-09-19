@@ -10,10 +10,18 @@ export default function ProductsPage() {
     topDeals: false,
   });
 
-  const [hotDeal, setHotDeal] = useState(""); // For filtering the products by name
+  // For filtering the products by name
+  const [hotDeal, setHotDeal] = useState("");
+
+  // For filtering the products by Short
   const [sortBy, setSortBy] = useState("name-asc");
+
+  // For filtering the products by count
   const [showCount, setShowCount] = useState(12);
+
+  // To set the products on the grid view toggle
   const [view, setView] = useState("grid");
+
   return (
     <section className="w-full flex flex-col p-5">
       <div className="w-full flex justify-between">

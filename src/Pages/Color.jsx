@@ -1,19 +1,11 @@
 import React, { useState } from "react";
+import { colors } from "../data/color";
 
 export default function Color() {
-  const [selectedColor, setSelectedColor] = useState("#006CFF");
+  const [selectedColor, setSelectedColor] = useState(null);
 
-  const colors = [
-    "#006CFF",
-    "#FC3E39",
-    "#171717",
-    "#FFF600",
-    "#FF00B4",
-    "#EFDFDF",
-  ];
-
-  const handleColorClick = (color) => {
-    setSelectedColor((prev) => (prev === color ? null : color));
+  const handleColorClick = (colorKey) => {
+    setSelectedColor((prev) => (prev === colorKey ? null : colorKey));
   };
 
   return (
@@ -21,18 +13,19 @@ export default function Color() {
       <div className="pl-4">
         <h2 className="text-xl mb-4 font-semibold">Color</h2>
 
-        <div className="flex justify-between items-center pt-5 pl-1 pr-3 pb-5">
-          {colors.map((color) => (
+        <div className="flex justify-between items-center gap-3">
+          {Object.entries(colors).map(([name, hex]) => (
             <div
-              key={color}
-              onClick={() => handleColorClick(color)}
+              key={name}
+              onClick={() => handleColorClick(name)}
               className={`w-8 h-8 flex justify-center items-center rounded-2xl cursor-pointer ${
-                selectedColor === color ? "border-2 border-[#006CFF]" : ""
+                selectedColor === name ? "border-2 border-[#006CFF]" : ""
               }`}
             >
               <div
                 className="w-5 h-5 rounded-full"
-                style={{ backgroundColor: color }}
+                style={{ backgroundColor: hex }}
+                title={name} 
               ></div>
             </div>
           ))}
