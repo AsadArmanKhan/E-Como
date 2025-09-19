@@ -112,6 +112,7 @@ function FilterOptions({ filters, setFilters, hotDeal, setHotDeal }) {
           expanded={expanded.prices}
           toggleExpand={() => toggleExpand("prices")}
           selected={filters.prices}
+          onChange={(values) => setFilters({ ...filters, prices: values })}
           onSelect={(val) => handleSelect("prices", val)}
         />
       </div>
