@@ -8,7 +8,7 @@ export const products = [
     oldPrice: 150,
     discount: "-20%",
     rating: 4,
-    image: "/public/36fadfb6e72b8e42c2afe8453f8af0e3795dd9e1 (1).png",
+    image: "/funky-sport.png",
     tag: "New",
   },
   {
@@ -20,7 +20,7 @@ export const products = [
     oldPrice: 200,
     discount: "-10%",
     rating: 5,
-    image: "/public/bag.png",
+    image: "/36fadfb6e72b8e42c2afe8453f8af0e3795dd9e1 (1).png",
     tag: "Hot",
   },
   {
@@ -32,7 +32,7 @@ export const products = [
     oldPrice: 110,
     discount: "-15%",
     rating: 3,
-    image: "/public/blue-under.png",
+    image: "/bag.png",
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ export const products = [
     oldPrice: 75,
     discount: "-20%",
     rating: 4,
-    image: "/public/funky-sport.png",
+    image: "/blue-under.png",
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ export const products = [
     oldPrice: 120,
     discount: "-15%",
     rating: 4,
-    image: "/public/yellow-back.png",
+    image: "/yellow-side.png",
   },
   {
     id: 6,
@@ -65,6 +65,6 @@ export const products = [
     oldPrice: 120,
     discount: "-15%",
     rating: 4,
-    image: "/public/yellow-side.png",
+    image: "/yellow-back.png",
   },
 ];

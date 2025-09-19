@@ -66,10 +66,10 @@ function FilterOptions() {
   const [filters, setFilters] = useState({
     brand: [],
     color: [],
-    prices: [0, 100], // this is just an example range
+    prices: [0, 100], // this is just an example range for error less code
     topDeals: false,
   });
-// Togglr Expand Logic Here
+// Toggle Expand Logic is Here
   const toggleExpand = (key) => {
     setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
   };

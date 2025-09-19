@@ -1,27 +1,32 @@
 import { useState } from "react";
-import { Grid, List } from "lucide-react"; // icons
+import { Grid, List } from "lucide-react";
 
-export default function ProductToolbar() {
+export default function ShortBy() {
   const [view, setView] = useState("grid");
 
   return (
-    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-gray-50 p-3 rounded-md shadow-sm gap-3">
+    <div className="flex flex-col gap-3 p-3 mb-5 mt-5 bg-gray-50 rounded-md shadow-sm sm:flex-row sm:items-center sm:justify-between">
+      
       {/* Left Side */}
-      <div className="flex items-center justify-between sm:justify-start gap-16">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-8">
+        
+        {/* Item Count */}
         <span className="text-sm font-medium text-gray-700">13 Items</span>
 
-        <div className="flex items-center gap-4">
+        {/* Sort By */}
+        <div className="flex items-center justify-between sm:justify-start gap-2">
           <span className="text-sm text-gray-500">Sort By</span>
-          <select className="border w-30 border-gray-200 rounded-md text-sm px-2 py-1 bg-white">
+          <select className="border w-full sm:w-32 border-gray-200 rounded-md text-sm px-2 py-1 bg-white">
             <option>Name</option>
             <option>Price</option>
             <option>Newest</option>
           </select>
         </div>
 
-        <div className="flex items-center gap-4">
+        {/* Show Count */}
+        <div className="flex items-center justify-between sm:justify-start gap-2">
           <span className="text-sm text-gray-500">Show</span>
-          <select className="border rounded-md border-gray-200 text-sm px-2 w-20  py-1 bg-white">
+          <select className="border w-full sm:w-20 border-gray-200 rounded-md text-sm px-2 py-1 bg-white">
             <option>12</option>
             <option>24</option>
             <option>36</option>
