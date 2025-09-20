@@ -91,8 +91,8 @@ export default function Products({
                 <img
                   src={product.image}
                   alt={product.name}
-                  className={`object-cover ${
-                    view === "list" ? "w-40 h-40 rounded-md" : "w-full h-80"
+                  className={`object-contain rounded-md ${
+                    view === "list" ? "w-32 h-32" : "w-full max-h-80"
                   }`}
                 />
 
