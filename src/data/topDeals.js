@@ -1,6 +1,6 @@
 export const topDealsData = [
   { name: "Nike", count: 2, reference: "Nike" },
-  { name: "Airmax", count: 48, reference: "Airmax" },
+  // { name: "", count: 48, reference: "Airmax" },
   { name: "Adidas", count: 14, reference: "Adidas" },
   { name: "Vans", count: 15, reference: "Vans" },
   { name: "Puma", count: 1, reference: "Puma" },

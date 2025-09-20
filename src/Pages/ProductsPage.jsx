@@ -17,7 +17,7 @@ export default function ProductsPage() {
   const [sortBy, setSortBy] = useState("name-asc");
 
   // For filtering the products by count
-  const [showCount, setShowCount] = useState(12);
+  const [showCount, setShowCount] = useState(6);
 
   // To set the products on the grid view toggle
   const [view, setView] = useState("grid");

@@ -10,7 +10,7 @@ export default function Color({ expanded, toggleExpand, selected, onSelect }) {
           onClick={toggleExpand}
         >
           <h2 className="text-xl mb-4 font-semibold">Color</h2>
-          <span>{expanded ? "-" : "+"}</span>
+          <span className="text-2xl ">{expanded ? "-" : "+"}</span>
         </div>
 
         {expanded && (
