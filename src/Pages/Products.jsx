@@ -2,6 +2,7 @@ import React from "react";
 import { products } from "../data/productsData";
 import ShortBy from "./ShortBy";
 import BigShoes from "./BigShoes";
+import ProductNotFound from "./ProductNotFound";
 
 export default function Products({
   filters = { brand: [], color: [], prices: [0, Infinity], topDeals: false },
@@ -63,7 +64,7 @@ export default function Products({
       />
 
       {sortedProducts.length === 0 ? (
-        <p className="text-center text-gray-500 mt-6">No products found</p>
+        <ProductNotFound />
       ) : (
         <>
           <div
@@ -136,7 +137,10 @@ export default function Products({
                     </span>
                   </div>
                   <div className="flex text-lg font-semibold text-gray-800  items-center gap-2 justify-center mt-3">
-                    RatingCount: <span className="text-xl text-green-500">{product.ratingCount}</span>
+                    RatingCount:{" "}
+                    <span className="text-xl text-green-500">
+                      {product.ratingCount}
+                    </span>
                   </div>
                 </div>
               </div>

@@ -22,84 +22,114 @@ If you prefer TypeScript, use the Vite React TypeScript template to add type-awa
 - Node.js 14.18+ or 16+
 - npm (or Yarn / pnpm)
 
-## Quick Start
+# 🛍️ E-Como — Responsive E-Commerce UI
 
-Install dependencies and run the development server:
+A modern, mobile-first, responsive e-commerce front-end built with **React (Vite)** and **Tailwind CSS**. This project demonstrates a polished product grid with ratings, discount badges, pagination, and brand filters — useful as a UI prototype or starting point for a storefront.
+
+---
+
+## 🚀 Live Demo
+
+> 🔗 https://e-como.vercel.app/
+
+---
+
+## ✨ Features
+
+- 📱 Mobile-first responsive design
+- ⭐ Product cards with ratings, discount badges, and price
+- 🏷️ Brand filter (single-select)
+- 📑 Pagination support
+- 🎨 Modern UI styled with Tailwind CSS
+- ⚡ Built with React + Vite for fast development and builds
+- 🌐 Deployed on Vercel (production preview)
+
+---
+
+## 🔧 Tech Stack
+
+- React (Vite)
+- Tailwind CSS
+- Vercel (deployment)
+
+---
+
+## 🧭 Project Structure
+
+```
+E-Como/
+├── public/             # Static assets (images, icons)
+├── src/
+│   ├── Components/     # Reusable UI components
+│   ├── Pages/          # Page-level components
+│   ├── data/           # Product/brand data and mocks
+│   ├── App.jsx         # Root React component
+│   ├── main.jsx        # App entry (ReactDOM)
+│   └── index.css       # Global styles
+├── package.json        # Dependencies & scripts
+├── vite.config.js      # Vite configuration
+└── README.md           # Project documentation
+```
+
+---
+
+## 🔧 Setup & Run
+
+Clone the repository and run locally:
 
 ```bash
-# from the project root
+git clone https://github.com/AsadArmanKhan/E-Como.git
+cd E-Como
 npm install
 npm run dev
 ```
 
-Build for production and preview the build:
+Build and preview a production bundle:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-Notes for PowerShell users (Windows):
+Notes for Windows PowerShell users:
 
 ```powershell
 # remove node_modules and reinstall
 Remove-Item -Recurse -Force node_modules; npm install
 ```
 
-## Available Scripts
+---
 
-- `dev` — start Vite dev server with HMR
-- `build` — create a production build
+## 📦 Available Scripts (from `package.json`)
+
+- `dev` — start the Vite dev server with HMR
+- `build` — build production assets
 - `preview` — preview the production build locally
-- `lint` — run ESLint (if configured in `package.json`)
+- `lint` — run ESLint (if configured)
 
-Replace `npm` with `yarn` or `pnpm` if you use a different package manager.
+Replace `npm` with `yarn` or `pnpm` if you prefer an alternative package manager.
 
-## Project Structure
+---
 
-Key files and folders:
+## 🧪 Notes & Tips
 
-- `index.html` — application HTML entry
-- `package.json` — scripts and dependencies
-- `vite.config.js` — Vite configuration
-- `src/` — source files
-  - `main.jsx` — app entry (ReactDOM render)
-  - `App.jsx` — root React component
-  - `index.css`, `App.css` — styles
-  - `Components/` — reusable UI components (Header, Footer, Sidebar, etc.)
-  - `Pages/` — page-level components (views)
-  - `data/` — sample data used by demo pages
-- `public/` — static assets (images, icons)
+- Tailwind CSS makes it easy to keep components consistent and responsive; extend the theme in `tailwind.config.js` as needed.
+- For larger projects, consider adding TypeScript, unit tests (Jest / React Testing Library), and end-to-end tests (Cypress).
+- Add `Husky` + `lint-staged` to enforce linting and formatting on commit.
 
-This template ships with example components and pages modeled as a simple storefront to show typical patterns.
+---
 
-## ESLint and Formatting
+## 👨‍💻 Author
 
-An ESLint configuration is included. Consider adding Prettier for formatting and Husky + lint-staged for pre-commit checks:
+**Asad Arman Khan**
 
-- `npm run lint` — run ESLint
-- `prettier --write` — format files (if Prettier is added)
+- GitHub: https://github.com/AsadArmanKhan
+- LinkedIn: https://www.linkedin.com/in/asad-arman-khan-a62b5134b/
 
-## Contributing
+---
 
-Contributions are welcome. Suggested workflow:
+## 📄 License
 
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feat/your-feature`.
-3. Implement your changes and test locally.
-4. Run linter/formatters and add tests if relevant.
-5. Open a pull request describing the change.
-
-For larger changes, open an issue first to discuss the approach.
-
-## Troubleshooting
-
-- If the dev server fails to start: confirm Node.js version and reinstall dependencies.
-- If you see unexpected styling or asset issues: check `public/` and imported paths in `src/`.
-- Port conflicts: set `PORT` env var or pass `--port` to Vite in the `dev` script.
-
-## License
-
-This template contains no license file by default. Add a `LICENSE` file (for example, MIT or Apache-2.0) if you plan to publish.
+This repository does not include a license file by default. Add a `LICENSE` (for example, MIT) if you plan to publish or share this project publicly.
 
 ---
