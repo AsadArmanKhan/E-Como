@@ -9,6 +9,7 @@ export const products = [
     oldPrice: 150,
     discount: "-20%",
     rating: 4,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image: "/36fadfb6e72b8e42c2afe8453f8af0e3795dd9e1 (1).png",
     tag: "New",
   },
@@ -22,6 +23,7 @@ export const products = [
     oldPrice: 200,
     discount: "-10%",
     rating: 5,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image:
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/778d1c14b94648c18a79e4db3915b78d_9366/Ultraboost_5_Shoes_Black_JH9633_01_standard.jpg",
     tag: "Hot",
@@ -36,6 +38,7 @@ export const products = [
     oldPrice: 110,
     discount: "-15%",
     rating: 3,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image: "/blue-under.png",
   },
   {
@@ -48,6 +51,7 @@ export const products = [
     oldPrice: 75,
     discount: "-20%",
     rating: 4,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image: "/funky-sport.png",
   },
   {
@@ -60,7 +64,9 @@ export const products = [
     oldPrice: 120,
     discount: "-15%",
     rating: 4,
-    image: "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/7384262b-02d6-47ca-b435-648be9982553/FLEX+EXPERIENCE+RN+12.png",
+    ratingCount: Math.floor(Math.random() * 500) + 1,
+    image:
+      "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/7384262b-02d6-47ca-b435-648be9982553/FLEX+EXPERIENCE+RN+12.png",
   },
   {
     id: 6,
@@ -72,7 +78,9 @@ export const products = [
     oldPrice: 120,
     discount: "-15%",
     rating: 4,
-    image: "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/2e73e441-6923-463e-83e8-536fb536de5b/FLEX+RUNNER+3+%28GS%29.png",
+    ratingCount: Math.floor(Math.random() * 500) + 1,
+    image:
+      "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/2e73e441-6923-463e-83e8-536fb536de5b/FLEX+RUNNER+3+%28GS%29.png",
   },
   {
     id: 7,
@@ -84,6 +92,7 @@ export const products = [
     oldPrice: 160,
     discount: "-19%",
     rating: 4,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image: "/yellow-side.png",
     tag: "New",
   },
@@ -97,6 +106,7 @@ export const products = [
     oldPrice: 170,
     discount: "-18%",
     rating: 5,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image:
       "https://i.pinimg.com/474x/4f/a2/8c/4fa28cdc5c0b2a19c16da3bd9de00ce3.jpg",
   },
@@ -110,6 +120,7 @@ export const products = [
     oldPrice: 155,
     discount: "-19%",
     rating: 4,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcQu5EP7JhLlHjX8fJ1Jy23_yZdrFc83FlcQ&s",
     tag: "Hot",
@@ -124,6 +135,7 @@ export const products = [
     oldPrice: 175,
     discount: "-17%",
     rating: 3,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyqQvGMnwLs38koMKNnDMjPnAXvbldHUo9GA&s",
   },
@@ -137,6 +149,7 @@ export const products = [
     oldPrice: 165,
     discount: "-18%",
     rating: 4,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image:
       "https://cdn-images.farfetch-contents.com/24/12/99/18/24129918_55589144_600.jpg",
   },
@@ -150,7 +163,9 @@ export const products = [
     oldPrice: 115,
     discount: "-17%",
     rating: 5,
-    image: "https://cdn.shopify.com/s/files/1/0617/9690/9233/files/100032920_ID6680_1_533x.jpg?v=1694488732",
+    ratingCount: Math.floor(Math.random() * 500) + 1,
+    image:
+      "https://cdn.shopify.com/s/files/1/0617/9690/9233/files/100032920_ID6680_1_533x.jpg?v=1694488732",
     tag: "New",
   },
   {
@@ -163,6 +178,7 @@ export const products = [
     oldPrice: 105,
     discount: "-19%",
     rating: 4,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image: "https://imagescdn.reebok.in/img/app/product/8/802140-9482480.jpg",
   },
   {
@@ -175,7 +191,9 @@ export const products = [
     oldPrice: 130,
     discount: "-15%",
     rating: 3,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQx9VH3W8C5LyjBzm5ldC7i4oph_f2h0JEw&s",
+    ratingCount: Math.floor(Math.random() * 500) + 1,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQx9VH3W8C5LyjBzm5ldC7i4oph_f2h0JEw&s",
     tag: "Hot",
   },
   {
@@ -188,7 +206,9 @@ export const products = [
     oldPrice: 140,
     discount: "-14%",
     rating: 4,
-    image: "https://cdn-images.farfetch-contents.com/19/92/34/38/19923438_44697554_1000.jpg",
+    ratingCount: Math.floor(Math.random() * 500) + 1,
+    image:
+      "https://cdn-images.farfetch-contents.com/19/92/34/38/19923438_44697554_1000.jpg",
   },
   {
     id: 16,
@@ -200,7 +220,9 @@ export const products = [
     oldPrice: 125,
     discount: "-16%",
     rating: 5,
-    image: "https://imagescdn.reebok.in/img/app/product/9/928585-16460291.jpg?auto=format&w=390",
+    ratingCount: Math.floor(Math.random() * 500) + 1,
+    image:
+      "https://imagescdn.reebok.in/img/app/product/9/928585-16460291.jpg?auto=format&w=390",
   },
   {
     id: 17,
@@ -212,6 +234,7 @@ export const products = [
     oldPrice: 190,
     discount: "-16%",
     rating: 5,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image: "/bag.png",
     tag: "New",
   },
@@ -225,6 +248,7 @@ export const products = [
     oldPrice: 200,
     discount: "-15%",
     rating: 4,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image:
       "https://cdn-images.farfetch-contents.com/14/86/22/44/14862244_24360902_600.jpg",
   },
@@ -238,6 +262,7 @@ export const products = [
     oldPrice: 180,
     discount: "-17%",
     rating: 5,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image:
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/69721f2e7c934d909168a80e00818569_9366/Stan_Smith_Shoes_White_M20324_01_standard.jpg",
     tag: "Hot",
@@ -252,6 +277,7 @@ export const products = [
     oldPrice: 170,
     discount: "-18%",
     rating: 4,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image:
       "https://hypefly.co.in/_next/image?url=https%3A%2F%2Fdjm0962033frr.cloudfront.net%2F1_7_08d549744f.webp&w=3840&q=75",
   },
@@ -265,6 +291,7 @@ export const products = [
     oldPrice: 185,
     discount: "-16%",
     rating: 5,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPQO78306eIoBTp3l85JgD9s7g83_xW38QSQ&s",
   },
@@ -278,6 +305,7 @@ export const products = [
     oldPrice: 185,
     discount: "-16%",
     rating: 5,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image:
       "https://cdn-images.farfetch-contents.com/12/07/09/47/12070947_12741715_600.jpg",
   },
@@ -291,6 +319,7 @@ export const products = [
     oldPrice: 185,
     discount: "-16%",
     rating: 5,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREXP1Ct6HDzh-J5GoVjys0hPnp67H9IrkpRA&s",
   },
@@ -304,6 +333,7 @@ export const products = [
     oldPrice: 185,
     discount: "-16%",
     rating: 5,
+    ratingCount: Math.floor(Math.random() * 500) + 1,
     image:
       "https://skipperbar.co.za/media/catalog/product/cache/8e71962534cb112d3996d77af375c1d8/v/a/van9ptw-vans-old-skool-pewter-true-wht-vn0a4bv51951-v1_jpg.jpg",
   },

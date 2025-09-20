@@ -131,7 +131,12 @@ export default function Products({
                     <span className="text-gray-400 line-through">
                       ${(product.price * 1.78).toFixed(2)}
                     </span>
-                    <span className="text-red-500 font-semibold">24% Off</span>
+                    <span className="text-red-500 font-semibold">
+                      {product.discount}
+                    </span>
+                  </div>
+                  <div className="flex text-lg font-semibold text-gray-800  items-center gap-2 justify-center mt-3">
+                    RatingCount: <span className="text-xl text-green-500">{product.ratingCount}</span>
                   </div>
                 </div>
               </div>
