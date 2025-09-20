@@ -103,6 +103,15 @@ function FilterOptions({ filters, setFilters, hotDeal, setHotDeal }) {
       <TopDeals
         hotDeal={hotDeal}
         onSelect={setHotDeal}
+        resetFilters={() => {
+          setHotDeal("");
+          setFilters({
+            brand: [],
+            color: [],
+            prices: [0, 1000],
+            topDeals: false,
+          });
+        }}
         expanded={expanded.topDeals}
         toggleExpand={() => toggleExpand("topDeals")}
       />

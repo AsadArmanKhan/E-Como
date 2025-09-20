@@ -38,7 +38,7 @@ export default function Brand({ expanded, toggleExpand, selected, onSelect }) {
               >
                 <div>{brand}</div>
                 <div className={isActive ? "text-[#33A0FF]" : "text-gray-300"}>
-                  99
+                  
                 </div>
               </div>
             );
